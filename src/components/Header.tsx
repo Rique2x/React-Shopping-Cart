@@ -17,7 +17,7 @@ function Header(props: Props) {
     <header className="Header">
       <Link to="/">
         <Button className="Logo">
-          <RiGameLine /> Game Store
+          <RiGameLine /> Fake Store
         </Button>
       </Link>
       <SearchBar />
