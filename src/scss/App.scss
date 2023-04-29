@@ -1,10 +1,21 @@
 @use 'colors';
 @use 'header';
+@use 'home';
 
 .App {
   min-height: 100vh;
-  background-color: colors.$bg;
+  display: flex;
+  flex-direction: column;
   font-family: 'GT Walsheim Pro';
+  background-color: colors.$bg;
+}
+
+.Loading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1;
 }
 
 .Button {
@@ -17,7 +28,7 @@
   background-color: transparent;
   color: colors.$text;
   cursor: pointer;
-  transition: transform 0.2s, color 0.2s;
+  transition: transform 0.15s, color 0.2s;
 
   font: {
     size: 16px;
@@ -25,11 +36,16 @@
     family: 'GT Walsheim Pro';
   }
 
+  svg {
+    transition: transform 0.2s;
+  }
+
+
   &:hover {
     color: white;
   }
 
   &:active {
-    transform: scale(0.9) !important;
+    transform: scale(0.925) !important;
   }
 }
