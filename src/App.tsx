@@ -47,7 +47,7 @@ function App() {
           />
         )}
       </AnimatePresence>
-      <AnimatePresence >
+      <AnimatePresence  exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route
             path="/"
