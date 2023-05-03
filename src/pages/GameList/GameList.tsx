@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useIsPresent } from 'framer-motion';
+import { useScrollTo } from 'framer-motion-scroll-to-hook';
 import { RiArrowLeftLine } from 'react-icons/ri';
 import { Transition, Button, Loading } from '../../components';
 import Grid from './components/Grid';
@@ -22,17 +23,25 @@ function GameList(props: Props) {
   const [games, setGames] = useState(props.games);
   const [searchParams] = useSearchParams();
   const [isLoading, setIsLoading] = useState(false);
+  const scrollTo = useScrollTo({ duration: 0.025 });
+  const isPresent = useIsPresent();
 
-  useEffect(() => setIsLoading(true), []);
+  useEffect(() => {
+    setIsLoading(true);
+  }, []);
+  useEffect(() => {
+    !isPresent && ({ scrollY } = window);
+  }, [isPresent]);
   useEffect(() => {
     if (props.games.length && !searchParams.get('search')) {
       setGames(props.games);
       setIsLoading(false);
     }
-  }, [props.games, searchParams]);
+  }, [props.games, searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const searchValue = searchParams.get('search') || '';
     if (searchValue) {
+      ({ scrollY } = window);
       setIsLoading(true);
       (async () => {
         setGames(await loadGames(searchValue));
