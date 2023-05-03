@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useScrollTo } from 'framer-motion-scroll-to-hook';
 import { RiArrowRightLine } from 'react-icons/ri';
 import { Transition, Button } from '../../components';
@@ -28,6 +28,7 @@ const getRandomGames = (games: Game[]): Game[] => {
 function Home(props: Props) {
   const { games } = props;
   const [homeGames, setHomeGames] = useState(getRandomGames(games));
+  const navigate = useNavigate();
   const scrollTo = useScrollTo();
 
   useEffect(() => {
@@ -50,11 +51,12 @@ function Home(props: Props) {
           big={i === 0}
         />
       ))}
-       <Link to="games" className="Store">
-        <Button>
-          Go to the store <RiArrowRightLine />
-        </Button>
-      </Link>
+      <Button
+            className="Store"
+            handleClick={() => navigate('games')}
+          >
+            Go to the store <RiArrowRightLine />
+          </Button>
     </Transition>
   );
 }

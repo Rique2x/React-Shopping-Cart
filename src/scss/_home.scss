@@ -75,18 +75,14 @@ $min-card-height: 125px;
     }
   }
 
-  a.Store {
+  .Button.Store {
     margin-left: 3%;
     justify-self: center;
 
-    .Button {
-      padding-inline: 0;
-      color: white;
-
-      font: {
-        size: clamp(20px, 2.5vw, 28px);
-        weight: 600;
-      }
+    font: {
+      size: clamp(20px, 2.35vw, 28px);
+      weight: 600;
+    }
 
       &:hover {
         color: colors.$accent;
@@ -97,7 +93,7 @@ $min-card-height: 125px;
       }
     }
   }
-}
+
 
 @media (max-width: 950px) {
   .Home {
@@ -109,7 +105,7 @@ $min-card-height: 125px;
       grid-row: 1 / 2;
     }
 
-    a.Store {
+    .Button.Store {
       margin-left: 1%;
       grid-column: 1 / 4;
     }
