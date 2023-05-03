@@ -16,7 +16,7 @@
     "framer-motion": "^10.12.4",
     "framer-motion-scroll-to-hook": "^1.0.1",
     "gh-pages": "^5.0.0",
-    "react": "^16.14.0",
+    "react": "^18.1.0",
     "react-animated-numbers": "^0.16.0",
     "react-cssfx-loading": "^2.1.0",
     "react-dom": "^18.2.0",

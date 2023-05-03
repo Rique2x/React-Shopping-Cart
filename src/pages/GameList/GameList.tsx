@@ -14,6 +14,8 @@ interface Props {
   addToCart: (game: Game) => void;
 }
 
+let scrollY = 0;
+
 function GameList(props: Props) {
   const {
     loadGames,
@@ -36,8 +38,10 @@ function GameList(props: Props) {
     if (props.games.length && !searchParams.get('search')) {
       setGames(props.games);
       setIsLoading(false);
+      scrollTo(scrollY);
     }
-  }, [props.games, searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
+    
+  }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     const searchValue = searchParams.get('search') || '';
     if (searchValue) {
@@ -47,7 +51,6 @@ function GameList(props: Props) {
         setGames(await loadGames(searchValue));
         setIsLoading(false);
       })();
-
     }
   }, [searchParams]); // eslint-disable-line react-hooks/exhaustive-deps
 
