@@ -1,4 +1,4 @@
-#### Check out [demo](https://rique2x.github.io/React-Memory-Card/)
+#### Check out [demo](https://rique2x.github.io/React-Shopping-Cart/)
 
 
 # Getting Started with Create React App
