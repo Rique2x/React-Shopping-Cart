@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/React-Shopping-Cart/static/css/main.ed20972b.css",
+    "main.css": "/React-Shopping-Cart/static/css/main.cf9f3fc0.css",
     "main.js": "/React-Shopping-Cart/static/js/main.afb33e69.js",
     "static/media/GTWalsheimPro-Black.woff2": "/React-Shopping-Cart/static/media/GTWalsheimPro-Black.3fa5ee7f8e647720d2fb.woff2",
     "static/media/GTWalsheimPro-Bold.woff2": "/React-Shopping-Cart/static/media/GTWalsheimPro-Bold.6b113f6b3bd165884e16.woff2",
@@ -11,11 +11,11 @@
     "static/media/GTWalsheimPro-Medium.woff2": "/React-Shopping-Cart/static/media/GTWalsheimPro-Medium.ad6b035f63b8e9185266.woff2",
     "static/media/GTWalsheimPro-UltraLight.woff2": "/React-Shopping-Cart/static/media/GTWalsheimPro-UltraLight.6119da646119c13cafe8.woff2",
     "index.html": "/React-Shopping-Cart/index.html",
-    "main.ed20972b.css.map": "/React-Shopping-Cart/static/css/main.ed20972b.css.map",
+    "main.cf9f3fc0.css.map": "/React-Shopping-Cart/static/css/main.cf9f3fc0.css.map",
     "main.afb33e69.js.map": "/React-Shopping-Cart/static/js/main.afb33e69.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed20972b.css",
+    "static/css/main.cf9f3fc0.css",
     "static/js/main.afb33e69.js"
   ]
 }
