@@ -27,10 +27,8 @@ function App() {
     setCartItems(cartItems.filter((item) => !ids.includes(item.id)));
   }, [cartItems]);
 
-
-
   return (
-   <div className="App">
+    <div className="App">
       <Header cartItems={cartItems} setIsCartOpen={setIsCartOpen} />
       <AnimatePresence exitBeforeEnter>
         {isCartOpen && (
@@ -41,13 +39,12 @@ function App() {
           />
         )}
       </AnimatePresence>
-      <AnimatePresence  exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-        <Route path='*' element={<NotFound />} />
+          <Route path='*' element={<NotFound />} />
           <Route
             path="/"
             element={<Home loadGames={loadGames} />}
-
           />
           <Route path="games">
             <Route
